@@ -1,3 +1,4 @@
+
 mapboxgl.accessToken =
   'pk.eyJ1IjoiYWxleGNhc2V5IiwiYSI6ImNtN2RsN3c4YjA0NzcybHBxbnp0Ynl6bm4ifQ.SxA-i94_ehVIk2qUy4hYUQ'
 
@@ -59,10 +60,10 @@ fetchWeatherButton.addEventListener('click', async () => {
       humidity,
       windSpeed,
     })
-    temperature.textContent = values.temperature + '°C'
-    feelsLike.textContent = values.apparentTemperature + '°C'
-    humidity.textContent = values.humidity + '%'
-    windSpeed.textContent = values.windSpeed + ' km/h'
+    temperature.textContent = "It's " + values.temperature + '°C'
+    feelsLike.textContent = "feels like " + values.apparentTemperature + '°C'
+    humidity.textContent = "humidity: " + values.humidity + '%'
+    windSpeed.textContent = "with winds: " + values.windSpeed + ' km/h'
   } catch (error) {
     console.error('Error fetching weather data:', error)
   }
