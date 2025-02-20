@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Guides</title>
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v3.10.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.10.0/mapbox-gl.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
+      .display {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: white;
+      }
+      .weather-display {
+        position: absolute;
+        top: 200px;
+        left: 20px;
+        background-color: white;
+      }
+      .weather-display button {
+        padding: 8px 16px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      .weather-display-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div class="display">
+      <p class="lng"></p>
+      <p class="lat"></p>
+    </div>
+    <div class="weather-display">
+      <div class="weather-display-content">
+        <p class="temperature"></p>
+        <p class="feels-like"></p>
+        <p class="humidity"></p>
+        <p class="wind-speed"></p>
+      </div>
+      <button class="fetch-weather-button">Get Weather</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
